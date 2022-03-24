@@ -1,4 +1,5 @@
-[01:41, 24/03/2022] Gayathri Reva: #include<stdio.h>
+
+#include<stdio.h>
 struct _triangle
 {
 float base,altitude,area;
