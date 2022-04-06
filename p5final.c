@@ -1,31 +1,21 @@
 #include<stdio.h>
 int input()
 {
-  int num;
+  int a;
   printf("enter a number\n");
-  scanf("%d",&num);
-  return num;
+  scanf("%d",&a);
+  return a;
 }
 int gcd(int a, int b)
 {
-  int large=a>b ? a:b;
-  int small=a<b ? a:b;
-  int i=1;
-  int rem=1;
-
-
-while (rem)
-{
- rem=large-i*small;
- if(rem<small)
- {
-   large=small;
-   small=rem;
-   i=0;
- }
- i++;
-}
-return large;
+  int t;
+  while(b!=0)
+    {
+      t=a;
+      b=b%a;
+      a=t;
+    }
+  return t;
 }
 void output(int a, int b, int gcd)
 {
@@ -33,11 +23,11 @@ void output(int a, int b, int gcd)
 }
 int main()
 {
-  int num1,num2, res;
-  num1=input();
-  num2=input();
-  res=gcd(num1,num2);
-  output(num1,num2,res);
+  int a,b,g;
+  a=input();
+  b=input();
+  g=gcd(a,b);
+  output(a,b,g);
   return 0;
 }
 
